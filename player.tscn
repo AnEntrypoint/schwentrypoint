@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://cw8w6clmxedi6"]
+[gd_scene load_steps=48 format=3 uid="uid://dmd4cvqdjs7r"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_hwwnj"]
 [ext_resource type="Script" path="res://player_input.gd" id="2_ju3m6"]
@@ -242,7 +242,7 @@ script = ExtResource("21_0e8gg")
 [node name="SpringArm3D" type="SpringArm3D" parent="Systems/Camera"]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.35536, 0)
-spring_length = 2.0
+spring_length = 4.0
 margin = 0.2
 
 [node name="TPC" type="Camera3D" parent="Systems/Camera/SpringArm3D"]
