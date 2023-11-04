@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c7lppvxfej7lv"
-path="res://.godot/imported/Lenny3.vrm-9168945c90ff3360a6855d8129de5a1a.scn"
+path="res://.godot/imported/Lenny3.vrm-309658dbbf21a2ed9dd338d3f3093e29.scn"
 
 [deps]
 
-source_file="res://Assets/Characters/Lenny/Lenny3.vrm"
-dest_files=["res://.godot/imported/Lenny3.vrm-9168945c90ff3360a6855d8129de5a1a.scn"]
+source_file="res://Assets/Characters/Lenny/v3/Lenny3.vrm"
+dest_files=["res://.godot/imported/Lenny3.vrm-309658dbbf21a2ed9dd338d3f3093e29.scn"]
 
 [params]
 
