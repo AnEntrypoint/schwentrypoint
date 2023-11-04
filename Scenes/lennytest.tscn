@@ -1,6 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://bktun2yt35iya"]
 
-[ext_resource type="PackedScene" uid="uid://11bdiml37nry" path="res://Assets/Characters/Lenny/Lenny2.glb" id="1_t58li"]
+[ext_resource type="PackedScene" uid="uid://11bdiml37nry" path="res://Assets/Characters/Lenny/v2/Lenny2.glb" id="1_t58li"]
+
 
 [node name="Node3D" type="Node3D"]
 
