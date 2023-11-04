@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bp51t6weaofjs"
-path.s3tc="res://.godot/imported/Lenny2_Atlas_00003.png-862f4af827aace6289cd613459955dae.s3tc.ctex"
+uid="uid://dukixh0a41v7t"
+path.s3tc="res://.godot/imported/tron_armory_hex_platform_lowpoly_0.png-9605dd6c6fa47850cf1ede38997162e1.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://Lenny2_Atlas_00003.png"
-dest_files=["res://.godot/imported/Lenny2_Atlas_00003.png-862f4af827aace6289cd613459955dae.s3tc.ctex"]
+source_file="res://Assets/platforms/textures/tron_armory_hex_platform_lowpoly_0.png"
+dest_files=["res://.godot/imported/tron_armory_hex_platform_lowpoly_0.png-9605dd6c6fa47850cf1ede38997162e1.s3tc.ctex"]
 
 [params]
 

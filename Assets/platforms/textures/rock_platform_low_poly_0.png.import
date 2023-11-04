@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bp51t6weaofjs"
-path.s3tc="res://.godot/imported/Lenny2_Atlas_00003.png-862f4af827aace6289cd613459955dae.s3tc.ctex"
+uid="uid://bra8bqavaaejw"
+path.s3tc="res://.godot/imported/rock_platform_low_poly_0.png-13bf7db7750f816b77c21ac1f425e129.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://Lenny2_Atlas_00003.png"
-dest_files=["res://.godot/imported/Lenny2_Atlas_00003.png-862f4af827aace6289cd613459955dae.s3tc.ctex"]
+source_file="res://Assets/platforms/textures/rock_platform_low_poly_0.png"
+dest_files=["res://.godot/imported/rock_platform_low_poly_0.png-13bf7db7750f816b77c21ac1f425e129.s3tc.ctex"]
 
 [params]
 

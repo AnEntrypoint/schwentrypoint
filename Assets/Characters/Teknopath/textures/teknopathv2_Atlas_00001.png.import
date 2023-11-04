@@ -2,18 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bp51t6weaofjs"
-path.s3tc="res://.godot/imported/Lenny2_Atlas_00003.png-862f4af827aace6289cd613459955dae.s3tc.ctex"
+uid="uid://5fquoexurvpl"
+path.s3tc="res://.godot/imported/teknopathv2_Atlas_00001.png-ecf939b3153b5d1b75aba51316eab14a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 
-source_file="res://Lenny2_Atlas_00003.png"
-dest_files=["res://.godot/imported/Lenny2_Atlas_00003.png-862f4af827aace6289cd613459955dae.s3tc.ctex"]
+source_file="res://Assets/Characters/Teknopath/textures/teknopathv2_Atlas_00001.png"
+dest_files=["res://.godot/imported/teknopathv2_Atlas_00001.png-ecf939b3153b5d1b75aba51316eab14a.s3tc.ctex"]
 
 [params]
 

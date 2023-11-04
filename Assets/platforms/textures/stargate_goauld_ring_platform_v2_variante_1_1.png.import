@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bp51t6weaofjs"
-path.s3tc="res://.godot/imported/Lenny2_Atlas_00003.png-862f4af827aace6289cd613459955dae.s3tc.ctex"
+uid="uid://dpv1h6ww3eicc"
+path.s3tc="res://.godot/imported/stargate_goauld_ring_platform_v2_variante_1_1.png-3b49fc9a0fb2aab3317a0d827897d626.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://Lenny2_Atlas_00003.png"
-dest_files=["res://.godot/imported/Lenny2_Atlas_00003.png-862f4af827aace6289cd613459955dae.s3tc.ctex"]
+source_file="res://Assets/platforms/textures/stargate_goauld_ring_platform_v2_variante_1_1.png"
+dest_files=["res://.godot/imported/stargate_goauld_ring_platform_v2_variante_1_1.png-3b49fc9a0fb2aab3317a0d827897d626.s3tc.ctex"]
 
 [params]
 
@@ -25,8 +25,8 @@ compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=0
-roughness/src_normal=""
+roughness/mode=8
+roughness/src_normal="res://Assets/platforms/stargate_goauld_ring_platform_v2_variante_1_2.png"
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false
