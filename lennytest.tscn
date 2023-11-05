@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://11bdiml37nry" path="res://Assets/Characters/Lenny/v2/Lenny2.glb" id="1_t58li"]
 
-
 [node name="Node3D" type="Node3D"]
 
 [node name="Lenny2" parent="." instance=ExtResource("1_t58li")]
