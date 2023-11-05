@@ -1,9 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://efwjm4hfeqf2"]
+[gd_scene load_steps=10 format=3 uid="uid://8foaxt7xw7gs"]
 
 [ext_resource type="Script" path="res://level.gd" id="1_p4gvl"]
 [ext_resource type="PackedScene" uid="uid://dm0mp3y4x7y36" path="res://Assets/platforms/cgt_116_assignment_3_doric_pillars_environment.glb" id="2_8alcc"]
 [ext_resource type="Script" path="res://Kill.gd" id="3_yb72s"]
 [ext_resource type="PackedScene" uid="uid://c13yt30klwdt2" path="res://Assets/platforms/turret_platform_sci-fi.glb" id="4_20xys"]
+[ext_resource type="PackedScene" uid="uid://c7to11ulqrgbq" path="res://Assets/platforms/stone_platform.glb" id="5_3xpka"]
+[ext_resource type="PackedScene" uid="uid://3wu2hchpk1gn" path="res://Scenes/pillars.tscn" id="6_tl1h6"]
+[ext_resource type="PackedScene" uid="uid://ovh55fgyu3me" path="res://Assets/platforms/stargate_goauld_ring_platform_v2_variante_1.glb" id="7_ojtc2"]
+[ext_resource type="Script" path="res://Assets/platforms/rotate.gd" id="8_lqjqw"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_66cdc"]
 
@@ -23,7 +27,7 @@ spawn_path = NodePath("../Players")
 spawn_limit = 4
 
 [node name="cgt_116_assignment_3_doric_pillars_environment" parent="." instance=ExtResource("2_8alcc")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -1.91114, -1.07778, 0.433399)
+transform = Transform3D(0.365, 0, 0, 0, 0, 0, 0, 0, 0, -1.91114, -1.07778, 0.433399)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.655532, 0.755167, 0, -0.755167, -0.655532, -0.00867557, 2.55178, 0.0166789)
@@ -43,11 +47,20 @@ shape = SubResource("SphereShape3D_66cdc")
 [node name="turret_platform_sci-fi" parent="." instance=ExtResource("4_20xys")]
 transform = Transform3D(0.854993, 2.26704e-08, 0.518639, -2.26704e-08, 1, -6.33844e-09, -0.518639, -6.33844e-09, 0.854993, -22.6456, 0, -5.31313)
 
+[node name="turret_platform_sci-fi36" parent="." instance=ExtResource("4_20xys")]
+transform = Transform3D(0.854993, 2.26704e-08, 0.518639, -2.26704e-08, 1, -6.33844e-09, -0.518639, -6.33844e-09, 0.854993, 16.6966, 0, 15.6896)
+
 [node name="turret_platform_sci-fi2" parent="." instance=ExtResource("4_20xys")]
 transform = Transform3D(0.86003, 0, 0.510243, 0, 1, 0, -0.510243, 0, 0.86003, -21.9877, 0, 1.20235)
 
+[node name="turret_platform_sci-fi34" parent="." instance=ExtResource("4_20xys")]
+transform = Transform3D(0.86003, 0, 0.510243, 0, 1, 0, -0.510243, 0, 0.86003, 21.1569, 0, 1.20235)
+
 [node name="turret_platform_sci-fi30" parent="." instance=ExtResource("4_20xys")]
 transform = Transform3D(0.999987, 0, 0.0051313, 0, 1, 0, -0.0051313, 0, 0.999987, -19.9369, 0, -2.13892)
+
+[node name="turret_platform_sci-fi35" parent="." instance=ExtResource("4_20xys")]
+transform = Transform3D(0.999987, 0, 0.0051313, 0, 1, 0, -0.0051313, 0, 0.999987, 22.6913, 0, 6.26616)
 
 [node name="turret_platform_sci-fi31" parent="." instance=ExtResource("4_20xys")]
 transform = Transform3D(0.967356, 0, 0.25342, 0, 1, 0, -0.25342, 0, 0.967356, -17, 0, -1.44789)
@@ -76,8 +89,17 @@ transform = Transform3D(0.914699, -1.76653e-08, -0.404136, 1.76653e-08, 1, -3.72
 [node name="turret_platform_sci-fi9" parent="." instance=ExtResource("4_20xys")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.89637, 0, -15.0028)
 
+[node name="turret_platform_sci-fi37" parent="." instance=ExtResource("4_20xys")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.89637, 0, 23.5386)
+
 [node name="turret_platform_sci-fi10" parent="." instance=ExtResource("4_20xys")]
 transform = Transform3D(0.889823, 0, -0.456306, 0, 1, 0, 0.456306, 0, 0.889823, 2.56104, 0, -19.5577)
+
+[node name="turret_platform_sci-fi38" parent="." instance=ExtResource("4_20xys")]
+transform = Transform3D(0.969544, 0, 0.244918, 0, 1, 0, -0.244918, 0, 0.969544, 8.36565, 0, -19.5577)
+
+[node name="turret_platform_sci-fi39" parent="." instance=ExtResource("4_20xys")]
+transform = Transform3D(0.969544, 0, 0.244918, 0, 1, 0, -0.244918, 0, 0.969544, 22.1763, 0, -6.96132)
 
 [node name="turret_platform_sci-fi32" parent="." instance=ExtResource("4_20xys")]
 transform = Transform3D(0.588152, 0, -0.80875, 0, 1, 0, 0.80875, 0, 0.588152, -0.167038, 0, -16.6359)
@@ -121,6 +143,9 @@ transform = Transform3D(0.934943, 0, 0.354797, 0, 1, 0, -0.354797, 0, 0.934943, 
 [node name="turret_platform_sci-fi23" parent="." instance=ExtResource("4_20xys")]
 transform = Transform3D(0.638566, 3.36388e-08, 0.769567, -3.36388e-08, 1, -1.57988e-08, -0.769567, -1.57988e-08, 0.638566, 5.7839, 0, 18.0201)
 
+[node name="turret_platform_sci-fi40" parent="." instance=ExtResource("4_20xys")]
+transform = Transform3D(0.638566, 3.36388e-08, 0.769567, -3.36388e-08, 1, -1.57988e-08, -0.769567, -1.57988e-08, 0.638566, 5.7839, 0, -21.8203)
+
 [node name="turret_platform_sci-fi24" parent="." instance=ExtResource("4_20xys")]
 transform = Transform3D(0.870605, 0, 0.491983, 0, 1, 0, -0.491983, 0, 0.870605, -2.89637, 0, 16.5165)
 
@@ -138,5 +163,15 @@ transform = Transform3D(0.953438, -1.31828e-08, -0.301588, 1.31828e-08, 1, -2.03
 
 [node name="turret_platform_sci-fi29" parent="." instance=ExtResource("4_20xys")]
 transform = Transform3D(0.881163, -2.06673e-08, -0.472812, 2.06673e-08, 1, -5.19452e-09, 0.472812, -5.19452e-09, 0.881163, -12.9664, 0, 12.0663)
+
+[node name="stone_platform" parent="." instance=ExtResource("5_3xpka")]
+transform = Transform3D(0.0661858, 0, 0, 0, 0.0982112, 0, 0, 0, 0.0661858, 0.137417, -5.00251, 0.0540215)
+
+[node name="cgt_116_assignment_3_doric_pillars_environment2" parent="." instance=ExtResource("6_tl1h6")]
+transform = Transform3D(0.109558, 0, 0, 0, 0.109558, 0, 0, 0, 0.109558, 0, -6.10299, 0)
+
+[node name="stargate_goauld_ring_platform_v2_variante_1" parent="." instance=ExtResource("7_ojtc2")]
+transform = Transform3D(7.90543, 0, 0, 0, 7.90543, 0, 0, 0, 7.90543, -0.662556, -0.391611, 0.70543)
+script = ExtResource("8_lqjqw")
 
 [connection signal="body_exited" from="Kill" to="Kill" method="_on_body_exited"]

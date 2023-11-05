@@ -59,24 +59,40 @@ _subresources={
 "PATH:Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/pillar_doric7/pillar_doric7_lambert1_0": {
 "generate/physics": true
 },
+"PATH:Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/podium_disc1": {
+"import/skip_import": true
+},
 "PATH:Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/podium_disc1/podium_disc1_lambert1_0": {
 "generate/physics": true,
 "physics/shape_type": 2
+},
+"PATH:Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/podium_disc2": {
+"import/skip_import": true
 },
 "PATH:Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/podium_disc2/podium_disc2_lambert1_0": {
 "generate/physics": true,
 "physics/shape_type": 2
 },
+"PATH:Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/podium_disc3": {
+"import/skip_import": true
+},
 "PATH:Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/podium_disc3/podium_disc3_lambert1_0": {
 "generate/physics": true,
 "physics/shape_type": 2
+},
+"PATH:Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/podium_disc4": {
+"import/skip_import": true
 },
 "PATH:Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/podium_disc4/podium_disc4_lambert1_0": {
 "generate/physics": true,
 "physics/shape_type": 2
 },
+"PATH:Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/podium_disc5": {
+"import/skip_import": true
+},
 "PATH:Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/podium_disc5/podium_disc5_lambert1_0": {
 "generate/physics": true,
+"import/skip_import": true,
 "physics/shape_type": 2
 },
 "PATH:Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/podium_top1/podium_top1_lambert1_0": {
