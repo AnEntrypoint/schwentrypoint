@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://3wu2hchpk1gn"]
+
+[ext_resource type="PackedScene" uid="uid://dm0mp3y4x7y36" path="res://Assets/platforms/cgt_116_assignment_3_doric_pillars_environment.glb" id="1_y6wl1"]
+[ext_resource type="Material" uid="uid://d4x0f0jgpsw6" path="res://Assets/sand.tres" id="2_s400d"]
+
+[node name="cgt_116_assignment_3_doric_pillars_environment" instance=ExtResource("1_y6wl1")]
+
+[node name="pillar_doric_lambert1_0" parent="Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/pillar_doric" index="0"]
+material_override = ExtResource("2_s400d")
+
+[node name="pillar_doric1_lambert1_0" parent="Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/pillar_doric1" index="0"]
+material_override = ExtResource("2_s400d")
+
+[node name="pillar_doric2_lambert1_0" parent="Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/pillar_doric2" index="0"]
+material_override = ExtResource("2_s400d")
+
+[node name="pillar_doric3_lambert1_0" parent="Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/pillar_doric3" index="0"]
+material_override = ExtResource("2_s400d")
+
+[node name="pillar_doric4_lambert1_0" parent="Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/pillar_doric4" index="0"]
+material_override = ExtResource("2_s400d")
+
+[node name="pillar_doric5_lambert1_0" parent="Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/pillar_doric5" index="0"]
+material_override = ExtResource("2_s400d")
+
+[node name="pillar_doric6_lambert1_0" parent="Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/pillar_doric6" index="0"]
+material_override = ExtResource("2_s400d")
+
+[node name="pillar_doric7_lambert1_0" parent="Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/pillar_doric7" index="0"]
+material_override = ExtResource("2_s400d")
+
+[node name="podium_disc1_lambert1_0" parent="Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/podium_disc1" index="0"]
+material_override = ExtResource("2_s400d")
+
+[node name="podium_disc2_lambert1_0" parent="Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/podium_disc2" index="0"]
+material_override = ExtResource("2_s400d")
+
+[node name="podium_disc3_lambert1_0" parent="Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/podium_disc3" index="0"]
+material_override = ExtResource("2_s400d")
+
+[node name="podium_disc4_lambert1_0" parent="Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/podium_disc4" index="0"]
+material_override = ExtResource("2_s400d")
+
+[node name="podium_disc5_lambert1_0" parent="Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/podium_disc5" index="0"]
+material_override = ExtResource("2_s400d")
+
+[node name="podium_top1_lambert1_0" parent="Sketchfab_model/8a154e21c0cc4d07a2d61bbaa001c2c8_fbx/RootNode/podium_top1" index="0"]
+material_override = ExtResource("2_s400d")
