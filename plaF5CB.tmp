@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://cw8w6clmxedi6"]
+[gd_scene load_steps=48 format=3 uid="uid://dmd4cvqdjs7r"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_hwwnj"]
 [ext_resource type="Script" path="res://player_input.gd" id="2_ju3m6"]
@@ -178,7 +178,6 @@ transitions = ["idle4fall", "jump3down", SubResource("AnimationNodeStateMachineT
 graph_offset = Vector2(-40, -7)
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_i602r"]
-graph_offset = Vector2(-420.432, -25.357)
 nodes/CrouchIdleWalk/node = SubResource("AnimationNodeBlendSpace1D_hrc0h")
 nodes/CrouchIdleWalk/position = Vector2(-240, 280)
 nodes/CrouchStand/node = SubResource("AnimationNodeTransition_8covd")
@@ -217,12 +216,11 @@ libraries = {
 }
 
 [node name="HeadBone" type="Node3D" parent="Mesh"]
-transform = Transform3D(1, -2.27828e-10, -4.65661e-10, -1.93268e-12, 1, 2.32831e-10, 2.32831e-10, 0, 1, -0.00211901, 1.5323, -0.00170457)
+transform = Transform3D(1, 4.88853e-12, -2.79397e-09, 7.95808e-13, 1, 1.16415e-10, 2.67755e-09, -1.16415e-10, 1, -0.00211902, 1.5323, -0.00170458)
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeBlendTree_i602r")
 anim_player = NodePath("../Mesh/MeshPlayer")
-active = true
 parameters/CrouchIdleWalk/blend_position = 0.0
 parameters/CrouchStand/current_state = "crouch_to_stand"
 parameters/CrouchStand/transition_request = ""
@@ -243,7 +241,7 @@ script = ExtResource("21_0e8gg")
 [node name="SpringArm3D" type="SpringArm3D" parent="Systems/Camera"]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.35536, 0)
-spring_length = 2.0
+spring_length = 4.0
 margin = 0.2
 
 [node name="TPC" type="Camera3D" parent="Systems/Camera/SpringArm3D"]
@@ -275,10 +273,10 @@ unique_name_in_owner = true
 script = ExtResource("21_w777m")
 
 [node name="CrouchCollision" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0.765485, 0)
 shape = SubResource("CapsuleShape3D_wh0lk")
 disabled = true
 
 [node name="StandCollision" type="CollisionShape3D" parent="."]
-transform = Transform3D(1.00415, -0.000767909, -0.000914334, 0.0007715, 1.00415, 0.00395963, 0.000911305, -0.00396033, 1.00415, 0, 0.75, 0)
+transform = Transform3D(1.5, -0.00114709, -0.00136584, 0.00115246, 1.49999, 0.00591488, 0.0013613, -0.00591592, 1.49999, 0, 1.13593, 0)
 shape = SubResource("CapsuleShape3D_px2ew")

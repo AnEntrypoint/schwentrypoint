@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://cw8w6clmxedi6"]
+[gd_scene load_steps=48 format=3 uid="uid://dmd4cvqdjs7r"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_hwwnj"]
 [ext_resource type="Script" path="res://player_input.gd" id="2_ju3m6"]
@@ -14,8 +14,10 @@
 [ext_resource type="Animation" uid="uid://b85e840yf6evr" path="res://Assets/Characters/Lenny/Clips/jump1runnning.res" id="12_runlq"]
 [ext_resource type="Animation" uid="uid://baah61lhgul35" path="res://Assets/Characters/Lenny/Clips/idle5crouch.res" id="13_hpo50"]
 [ext_resource type="Animation" uid="uid://b5ipf5nnbio1d" path="res://Assets/Characters/Lenny/Clips/idle4fall.res" id="14_m02nb"]
+[ext_resource type="Animation" uid="uid://8tjvgpkf4l1p" path="res://Assets/Characters/Lenny/Clips/jump3down.res" id="15_2x80x"]
 [ext_resource type="Animation" uid="uid://dxra1gsi4hrm3" path="res://Assets/Characters/Lenny/Clips/idle3sad.res" id="15_mvr0i"]
 [ext_resource type="Animation" uid="uid://bbpopqat6w8t8" path="res://Assets/Characters/Lenny/Clips/idle1normal.res" id="16_mjlqo"]
+[ext_resource type="Animation" uid="uid://dvi1ady3dec02" path="res://Assets/Characters/Lenny/Clips/left strafe walk.res" id="17_orosm"]
 [ext_resource type="Animation" uid="uid://b1m8ehsajcc54" path="res://Assets/Characters/Lenny/Clips/idle2happy.res" id="17_x4ybn"]
 [ext_resource type="Animation" uid="uid://d1uy3eg5ivki0" path="res://Assets/Characters/Lenny/Clips/get_up.res" id="18_xn4tn"]
 [ext_resource type="Animation" uid="uid://b0iifl7727ibv" path="res://Assets/Characters/Lenny/Clips/crouch_walk.res" id="19_pg77y"]
@@ -36,24 +38,32 @@ properties/2/path = NodePath(".:velocity")
 properties/2/spawn = true
 properties/2/sync = true
 properties/2/watch = false
-properties/3/path = NodePath(".:rotation")
-properties/3/spawn = true
-properties/3/sync = true
-properties/3/watch = false
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_hoavk"]
-properties/0/path = NodePath(".:direction")
+properties/0/path = NodePath(".:jumping")
 properties/0/spawn = false
 properties/0/sync = true
 properties/0/watch = false
-properties/1/path = NodePath(".:rotation")
-properties/1/spawn = false
+properties/1/path = NodePath(".:crouch")
+properties/1/spawn = true
 properties/1/sync = true
 properties/1/watch = false
-properties/2/path = NodePath(".:jumping")
-properties/2/spawn = false
+properties/2/path = NodePath(".:running")
+properties/2/spawn = true
 properties/2/sync = true
 properties/2/watch = false
+properties/3/path = NodePath(".:input_dir")
+properties/3/spawn = true
+properties/3/sync = true
+properties/3/watch = false
+properties/4/path = NodePath(".:direction")
+properties/4/spawn = true
+properties/4/sync = true
+properties/4/watch = false
+properties/5/path = NodePath("../Mesh:rotation")
+properties/5/spawn = true
+properties/5/sync = true
+properties/5/watch = false
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rde3y"]
 _data = {
@@ -68,7 +78,9 @@ _data = {
 "jump1runnning": ExtResource("12_runlq"),
 "jump2": ExtResource("11_y5kqv"),
 "jump2standing": ExtResource("10_6hdcy"),
+"jump3down": ExtResource("15_2x80x"),
 "jump4fallland": ExtResource("9_cgw2g"),
+"left strafe walk": ExtResource("17_orosm"),
 "right strafe": ExtResource("7_7igva"),
 "right strafe walk": ExtResource("8_gw1wh"),
 "running": ExtResource("6_2f5vh"),
@@ -166,7 +178,6 @@ transitions = ["idle4fall", "jump3down", SubResource("AnimationNodeStateMachineT
 graph_offset = Vector2(-40, -7)
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_i602r"]
-graph_offset = Vector2(-710.632, 252.295)
 nodes/CrouchIdleWalk/node = SubResource("AnimationNodeBlendSpace1D_hrc0h")
 nodes/CrouchIdleWalk/position = Vector2(-240, 280)
 nodes/CrouchStand/node = SubResource("AnimationNodeTransition_8covd")
@@ -176,17 +187,16 @@ nodes/MainState/position = Vector2(-240, 500)
 nodes/output/position = Vector2(240, 220)
 node_connections = [&"output", 0, &"CrouchStand", &"CrouchStand", 0, &"MainState", &"CrouchStand", 1, &"CrouchIdleWalk"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_px2ew"]
-radius = 0.365
-height = 1.5
-
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wh0lk"]
 radius = 0.365
 height = 1.0
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_px2ew"]
+radius = 0.365
+height = 1.5
+
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_hwwnj")
-player = null
 
 [node name="ServerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_fb1vy")
@@ -195,13 +205,6 @@ replication_config = SubResource("SceneReplicationConfig_fb1vy")
 root_path = NodePath(".")
 replication_config = SubResource("SceneReplicationConfig_hoavk")
 script = ExtResource("2_ju3m6")
-jumping = null
-direction = null
-crouch = null
-running = null
-cameraType = null
-is_on_floor = null
-input_dir = null
 
 [node name="Mesh" parent="." instance=ExtResource("3_k26qi")]
 transform = Transform3D(-0.999998, -0.00138138, 0.00135751, -0.0013829, 0.999998, -0.00111242, -0.00135597, -0.0011143, -0.999998, 0.00678962, 0.0083939, -0.0242674)
@@ -212,18 +215,11 @@ libraries = {
 }
 
 [node name="HeadBone" type="Node3D" parent="Mesh"]
-transform = Transform3D(1, -2.27828e-10, -4.65661e-10, -1.93268e-12, 1, 2.32831e-10, 2.32831e-10, 0, 1, -0.00211901, 1.5323, -0.00170457)
-
-[node name="CamParent" type="SpringArm3D" parent="."]
-transform = Transform3D(2.195, 0, 0, 0, 2.195, 0, 0, 0, 2.195, 0.425538, 0.445913, -0.00125599)
-
-[node name="Camera3D" type="Camera3D" parent="CamParent"]
-transform = Transform3D(0.455581, 0, 0, 0, 0.455581, 0, 0, 0, 0.455581, 0.112882, 0.740744, 1.87861)
+transform = Transform3D(1, 4.88853e-12, -2.79397e-09, 7.95808e-13, 1, 1.16415e-10, 2.67755e-09, -1.16415e-10, 1, -0.00211902, 1.5323, -0.00170458)
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeBlendTree_i602r")
 anim_player = NodePath("../Mesh/MeshPlayer")
-active = true
 parameters/CrouchIdleWalk/blend_position = 0.0
 parameters/CrouchStand/current_state = "crouch_to_stand"
 parameters/CrouchStand/transition_request = ""
@@ -242,8 +238,9 @@ target_position = Vector3(0, -0.5, 0)
 script = ExtResource("21_0e8gg")
 
 [node name="SpringArm3D" type="SpringArm3D" parent="Systems/Camera"]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.35536, 0)
-spring_length = 2.0
+spring_length = 4.0
 margin = 0.2
 
 [node name="TPC" type="Camera3D" parent="Systems/Camera/SpringArm3D"]
@@ -251,8 +248,10 @@ unique_name_in_owner = true
 h_offset = 0.8
 v_offset = 0.25
 current = true
+near = 0.25
 
 [node name="FirstPersonCamera" type="Node3D" parent="Systems/Camera"]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 0.999948, -0.0101751, 0, 0.0101751, 0.999948, 0, 1.38959, 0)
 
 [node name="BoneTransform" type="Node3D" parent="Systems/Camera/FirstPersonCamera"]
@@ -260,8 +259,9 @@ transform = Transform3D(1, -1.11022e-16, 0, 0, 1, 9.31323e-10, 0, -9.31323e-10, 
 
 [node name="FPC" type="Camera3D" parent="Systems/Camera/FirstPersonCamera/BoneTransform"]
 unique_name_in_owner = true
-transform = Transform3D(-1, 8.88178e-16, -1.50996e-07, 7.77156e-16, 1, 9.31323e-10, 1.50996e-07, 9.31323e-10, -1, 0, -0.09, 0.23)
+transform = Transform3D(-1, 9.99201e-16, -1.50996e-07, 7.77156e-16, 1, 9.31323e-10, 1.50996e-07, 9.31323e-10, -1, 0, -0.09, 0.23)
 current = true
+near = 0.25
 
 [node name="Transition" type="Node3D" parent="Systems/Camera"]
 
@@ -271,11 +271,11 @@ unique_name_in_owner = true
 [node name="CheckRayCast" type="Node3D" parent="Systems"]
 script = ExtResource("21_w777m")
 
-[node name="StandCollision" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.999999, -0.000764732, -0.000910551, 0.000768308, 0.999992, 0.00394325, 0.000907535, -0.00394395, 0.999992, 0, 0.75, 0)
-shape = SubResource("CapsuleShape3D_px2ew")
-
 [node name="CrouchCollision" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0.765485, 0)
 shape = SubResource("CapsuleShape3D_wh0lk")
 disabled = true
+
+[node name="StandCollision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.5, -0.00114709, -0.00136584, 0.00115246, 1.49999, 0.00591488, 0.0013613, -0.00591592, 1.49999, 0, 1.13593, 0)
+shape = SubResource("CapsuleShape3D_px2ew")
