@@ -10,8 +10,11 @@ config_version=5
 
 [application]
 
-run/main_scene="res://multiplayer.tscn"
-config/features=PackedStringArray("4.1")
+config/name="schwentrypoint"
+config/version="0.00 concept"
+config/tags=PackedStringArray("247420")
+run/main_scene="res://Scenes/multiplayer.tscn"
+config/features=PackedStringArray("4.2")
 
 [editor_plugins]
 

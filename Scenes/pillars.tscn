@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://3wu2hchpk1gn"]
 
-[ext_resource type="PackedScene" uid="uid://dm0mp3y4x7y36" path="res://Assets/platforms/cgt_116_assignment_3_doric_pillars_environment.glb" id="1_y6wl1"]
-[ext_resource type="Material" uid="uid://d4x0f0jgpsw6" path="res://Assets/sand.tres" id="2_s400d"]
+[ext_resource type="PackedScene" uid="uid://dm0mp3y4x7y36" path="res://Assets/platforms/1 pillars/doric_pillars.glb" id="1_y6wl1"]
+[ext_resource type="Material" path="res://Assets/sand.tres" id="2_s400d"]
 
 [node name="cgt_116_assignment_3_doric_pillars_environment" instance=ExtResource("1_y6wl1")]
 

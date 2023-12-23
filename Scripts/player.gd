@@ -9,7 +9,7 @@ const RUN_SPEED := 8.0
 const CROUCH_SPEED := 1.0
 const ACC = .08
 const FRIC = .1
-const JUMP_VELOCITY = 4.5
+const JUMP_VELOCITY = 5.5
 const RUN_SPEED_ACC := .25
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")

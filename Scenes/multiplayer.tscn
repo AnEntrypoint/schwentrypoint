@@ -1,9 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://bvnwjpd0f3oa0"]
+[gd_scene load_steps=2 format=3 uid="uid://c7pe7aiinic3o"]
 
-[ext_resource type="Script" path="res://multiplayer.gd" id="1_jiv4u"]
+[ext_resource type="Script" path="res://Scripts/multiplayer.gd" id="1_plpsx"]
 
 [node name="Multiplayer" type="Node"]
-script = ExtResource("1_jiv4u")
+script = ExtResource("1_plpsx")
 
 [node name="Level" type="Node" parent="."]
 
